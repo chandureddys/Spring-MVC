@@ -19,7 +19,7 @@ public class EmployeeController {
 		employee.setId(12);
 		employee.setName("Chandrasekhar");
 		employee.setPosition("Software Engineer");
-		
+		modelandView.setViewName("employeeInfo");
 		modelandView.addObject("employee", employee);
 		
 		

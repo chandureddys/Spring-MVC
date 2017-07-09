@@ -1,13 +1,13 @@
 package com.spring.dto;
 
 public class Employee {
-	
+
 	private int id;
-	
-    private String name;
-	
+
+	private String name;
+
 	private String position;
-	
+
 	public int getId() {
 		return id;
 	}
@@ -36,8 +36,5 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", position=" + position + "]";
 	}
-
-	
-	
 
 }

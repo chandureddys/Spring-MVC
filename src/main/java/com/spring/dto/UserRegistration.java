@@ -1,9 +1,11 @@
 package com.spring.dto;
 
 public class UserRegistration {
-	
+
 	private String username;
-	
+
+	private int subscriberid;
+
 	public String getUsername() {
 		return username;
 	}
@@ -11,6 +13,7 @@ public class UserRegistration {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -24,5 +27,13 @@ public class UserRegistration {
 	@Override
 	public String toString() {
 		return "UserRegistration [username=" + username + ", email=" + email + "]";
-	}	
+	}
+
+	public int getSubscriberid() {
+		return subscriberid;
+	}
+
+	public void setSubscriberid(int subscriberid) {
+		this.subscriberid = subscriberid;
+	}
 }

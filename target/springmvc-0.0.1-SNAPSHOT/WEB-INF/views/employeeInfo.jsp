@@ -1,24 +1,23 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=US-ASCII"
+    pageEncoding="US-ASCII" import="com.spring.dto.Employee,java.util.List"%>
 <html>
 <body>
 <h2>Hello World!,welcome to Spring MVC Web App</h2>
 
-<%=request.getAttribute("employee")  %>
+<%
 
-<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="1">
-<TR>
-   <TH>Hash</TH>
-   <TH>Name</TH>
-   <TH>Count</TH>
-</TR>
-<c:forEach var="rr" items="${employee}">
-<TR>
-   <TD>${rr.id}</TD>
-   <TD>${rr.name}</TD>
-   <TD>${rr.position}</TD>
-</TR>
-</c:forEach>
-</TABLE>
+List<Employee> employee= (List<Employee>) request.getAttribute("employees");
+out.write("<table>");
 
+for(Employee e:employee){
+	out.write("<tr>");
+	out.write("<td>");out.println(e.getId()); out.write("</td>");
+	out.write("<td>");out.println(e.getId()); out.write("</td>");
+	out.write("<td>");out.println(e.getName()); out.write("</td>");
+	out.write("</tr>");
+}
+out.write("</table>");
+
+%>
 </body>
 </html>

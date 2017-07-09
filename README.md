@@ -7,9 +7,16 @@ Tomcat 8.5
 Hibernate5
 MYsql
 Mysql tables used for this project:
+
+
 Run below script in Mysql workbench before running this application.
+
+
 CREATE DATABASE mydb;
+
+
 use mydb;
+
 
 CREATE TABLE Registration(
     id INT NOT NULL AUTO_INCREMENT,

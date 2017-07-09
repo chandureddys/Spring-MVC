@@ -1,3 +1,5 @@
-com\spring\dto\Employee.class
+com\spring\controller\RegistrationController.class
 com\spring\controller\HelloController.class
+com\spring\dto\Employee.class
+com\spring\dto\UserRegistration.class
 com\spring\controller\EmployeeController.class

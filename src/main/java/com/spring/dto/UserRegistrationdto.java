@@ -2,27 +2,53 @@ package com.spring.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Registration")
 public class UserRegistrationdto {
+
 	@Id
-	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int subscriberid;
-	@Column(name = "username")
-	private String username;
+
+	@Column(name = "firstName")
+	private String firstName;
+
+	@Column(name = "lastName")
+	private String lastName;
 
 	@Column(name = "email")
 	private String email;
 
-	public String getUsername() {
-		return username;
+	@Column(name = "password")
+	private String password;
+
+	public int getSubscriberid() {
+		return subscriberid;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setSubscriberid(int subscriberid) {
+		this.subscriberid = subscriberid;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -33,18 +59,18 @@ public class UserRegistrationdto {
 		this.email = email;
 	}
 
-	public int getSubscriberid() {
-		return subscriberid;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setSubscriberid(int subscriberid) {
-		this.subscriberid = subscriberid;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
 	public String toString() {
-		return "UserRegistrationdto [subscriberid=" + subscriberid + ", username=" + username + ", email=" + email
-				+ "]";
+		return "UserRegistrationdto [subscriberid=" + subscriberid + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", email=" + email + "]";
 	}
 
 }

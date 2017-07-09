@@ -2,16 +2,28 @@ package com.spring.dto;
 
 public class UserRegistration {
 
-	private String username;
+	private String firstName;
 
-	private int subscriberid;
+	private String lastName;
 
-	public String getUsername() {
-		return username;
+	private String email;
+
+	private String password;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -22,18 +34,12 @@ public class UserRegistration {
 		this.email = email;
 	}
 
-	private String email;
-
-	@Override
-	public String toString() {
-		return "UserRegistration [username=" + username + ", email=" + email + "]";
+	public String getPassword() {
+		return password;
 	}
 
-	public int getSubscriberid() {
-		return subscriberid;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public void setSubscriberid(int subscriberid) {
-		this.subscriberid = subscriberid;
-	}
 }

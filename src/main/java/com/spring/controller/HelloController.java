@@ -6,13 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
-    
+
 	@RequestMapping("/hello")
-	protected ModelAndView hello(){
+	protected ModelAndView hello() {
 		ModelAndView modelandView = new ModelAndView();
 		modelandView.setViewName("hello");
 		return modelandView;
 	}
 
-	
 }

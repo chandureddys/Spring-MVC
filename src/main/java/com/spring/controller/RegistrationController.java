@@ -1,7 +1,5 @@
 package com.spring.controller;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,7 +32,7 @@ public class RegistrationController {
 		registrationDao.create(userRegistrationdt(userRegistration));
 		modelandView.setViewName("Profile");
 		modelandView.addObject("userRegistration", userRegistration);
-		modelandView.addObject("registrationsuccess", "Welcome to " + userRegistration.getUsername());
+		modelandView.addObject("registrationsuccess", "Welcome to " + userRegistration.getFirstName());
 		return modelandView;
 	}
 
@@ -42,8 +40,10 @@ public class RegistrationController {
 
 		UserRegistrationdto userRegistrationdto = new UserRegistrationdto();
 		userRegistrationdto.setEmail(userRegistration.getEmail());
-		userRegistrationdto.setUsername(userRegistration.getUsername());
-		userRegistrationdto.setSubscriberid(userRegistration.getSubscriberid());
+		userRegistrationdto.setFirstName(userRegistration.getFirstName());
+		userRegistrationdto.setLastName(userRegistration.getLastName());
+		userRegistrationdto.setPassword(userRegistration.getPassword());
+		// userRegistrationdto.setSubscriberid(userRegistration.getSubscriberid());
 		System.out.println(userRegistrationdto);
 		return userRegistrationdto;
 

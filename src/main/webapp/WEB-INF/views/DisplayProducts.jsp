@@ -54,45 +54,8 @@
 	<br>
 	<br/>
 	<br/>
-	<h1>var firstName = '<%= (String) (request.getAttribute("registrationsuccess")) %>'; </h1>
-	<%  session.setAttribute("firstName",(request.getAttribute("registrationsuccess")));%>
 	
-	<div class="container" id="wrap">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<form action="products" method="post" accept-charset="utf-8"
-					class="form" role="form">
-					<legend>Sign Up</legend>
-					</br> </br>
-					<h4>It's free and always will be.</h4>
-					 <input type="hidden" name="firstName" value="${firstName}"/>
-					<div class="row">
-						<div class="col-xs-6 col-md-6">
-							<input type="text" name="category" value=""
-								class="form-control input-lg" placeholder="Category Name" />
-						</div>
-
-						<div class="col-xs-6 col-md-6">
-							<input type="text" name="productName" value=""
-								class="form-control input-lg" placeholder="Product Name" />
-						</div>
-					</div>
-					</br> <input type="text" name="productDescription" value=""
-						class="form-control input-lg" placeholder="Product Description" /> </br>
-						 <input
-						type="text" name="price" value=""
-						class="form-control input-lg" placeholder="Price" /> </br>
-					<div class="row">
-
-						</br>
-						<button class="btn btn-lg btn-primary btn-block signup-btn"
-							type="submit">Add Products</button>
-				</form>
-
-			</div>
-		</div>
-	</div>
-	</div>
+	
 	
 	<div class="container">
 		<div class="row">

@@ -28,11 +28,10 @@ public class RegistrationController {
 	protected ModelAndView hello(@ModelAttribute("userRegistration") UserRegistration userRegistration) {
 		ModelAndView modelandView = new ModelAndView();
 
-		System.out.println(userRegistration);
 		registrationDao.create(userRegistrationdt(userRegistration));
 		modelandView.setViewName("Profile");
 		modelandView.addObject("userRegistration", userRegistration);
-		modelandView.addObject("registrationsuccess", "Welcome to " + userRegistration.getFirstName());
+		modelandView.addObject("registrationsuccess", userRegistration.getFirstName());
 		return modelandView;
 	}
 
@@ -43,8 +42,6 @@ public class RegistrationController {
 		userRegistrationdto.setFirstName(userRegistration.getFirstName());
 		userRegistrationdto.setLastName(userRegistration.getLastName());
 		userRegistrationdto.setPassword(userRegistration.getPassword());
-		// userRegistrationdto.setSubscriberid(userRegistration.getSubscriberid());
-		System.out.println(userRegistrationdto);
 		return userRegistrationdto;
 
 	}

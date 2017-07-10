@@ -35,6 +35,7 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.spring.dto.UserRegistrationdto</value>
+				<value>com.spring.dto.ProductDto</value>
 			</list>
 		</property>
 	</bean>

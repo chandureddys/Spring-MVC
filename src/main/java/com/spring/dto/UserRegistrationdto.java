@@ -13,7 +13,7 @@ public class UserRegistrationdto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int subscriberid;
+	private int id;
 
 	@Column(name = "firstName")
 	private String firstName;
@@ -27,12 +27,12 @@ public class UserRegistrationdto {
 	@Column(name = "password")
 	private String password;
 
-	public int getSubscriberid() {
-		return subscriberid;
+	public int getId() {
+		return id;
 	}
 
-	public void setSubscriberid(int subscriberid) {
-		this.subscriberid = subscriberid;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -69,8 +69,8 @@ public class UserRegistrationdto {
 
 	@Override
 	public String toString() {
-		return "UserRegistrationdto [subscriberid=" + subscriberid + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", email=" + email + "]";
+		return "UserRegistrationdto [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+				+ email + "]";
 	}
 
 }

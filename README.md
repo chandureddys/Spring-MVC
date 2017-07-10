@@ -28,4 +28,13 @@ CREATE TABLE Registration(
     PRIMARY KEY (id)
     );
 
-
+CREATE TABLE Products (
+    productid INT NOT NULL AUTO_INCREMENT,
+    category VARCHAR(100) NOT NULL,
+    productName VARCHAR(40) NOT NULL,
+    productDescription VARCHAR(40) NOT NULL,
+    id int,
+    price int NOT NULL,
+    PRIMARY KEY (productid),
+    FOREIGN KEY (id) REFERENCES Registration(id)
+);
